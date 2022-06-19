@@ -1,0 +1,13 @@
+﻿bp nt!ObOpenObjectByName "as /msu $Name poi(@rcx+0x10)
+.block{ $$不加block输出不了
+    .echo ${$Name} $$括号里也要有$符号
+    gc
+}"
+
+
+$
+$
+$ 参考
+$ https://www.cnblogs.com/hanawasakuraki/p/13502828.html
+$
+$
