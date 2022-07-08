@@ -1,0 +1,4 @@
+bp nt!EtwpRegTraceCallback "k
+.block{
+    gc
+}"
