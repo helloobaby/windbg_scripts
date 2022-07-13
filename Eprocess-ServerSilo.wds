@@ -1,4 +1,5 @@
-$ 0xFFFFAC070507F328 is _EPROCESS.ActiveProcessLinks content
+$ 0xFFFFAC070507F328 is any _EPROCESS.ActiveProcessLinks content
+$ 2E8 is offset of ActiveProcessLinks field
 
 !list -t nt!_LIST_ENTRY.FLink -x "dt nt!_EPROCESS ImageFileName ServerSilo @$extret-0x2E8" 0xFFFFAC070507F328
 
