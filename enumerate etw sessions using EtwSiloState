@@ -1,0 +1,7 @@
+
+.for(r $t0 = ffffac07`050cf250;@$t0 != ffffac07`050cf338;r $t0=@$t0+8){
+        dt _WMI_LOGGER_CONTEXT poi(@$t0)
+    }
+
+
+$   $$><C:\Users\15118\Desktop\windbg.wds      excute script command
