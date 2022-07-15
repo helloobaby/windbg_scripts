@@ -1,13 +1,11 @@
 bp nt!ObOpenObjectByName "as /msu $Name poi(@rcx+0x10)
-.block{ $$不加block输出不了
-    .echo ${$Name} $$括号里也要有$符号
+.block{ 
+    .echo ${$Name}
     gc
 }"
 
 
 $
-$
-$ 参考
-$ https://www.cnblogs.com/hanawasakuraki/p/13502828.html
-$
+$ 调试要用virtualkd加速的,不然脚本运行卡的动不了
+$ 脚本中文注释要放在后面
 $
