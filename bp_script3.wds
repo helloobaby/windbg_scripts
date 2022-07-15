@@ -1,0 +1,7 @@
+bp nt!NtCreateFile ".printf \"%ma\n\",(@$proc+0x450);g" 
+
+$
+$打印出NtCreateFile的调用进程
+$
+$
+$
