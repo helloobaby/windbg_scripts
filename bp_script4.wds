@@ -1,0 +1,7 @@
+bp /p ffffbd0c34711300 nt!NtCreateFile 
+
+
+$   实现api在指定进程下断下
+$
+$   下面这个报错，吗的不搞了
+$   bp nt!NtCreateFile ".if ($scmp(@$proc+0x450,\"explorer.exe\")) != 0 {.echo 1}.else {gc;}" 
