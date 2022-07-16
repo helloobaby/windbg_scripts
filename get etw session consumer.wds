@@ -1,0 +1,132 @@
+.for(r $t0 = ffffc20c`5f2cf250;@$t0 != ffffc20c`5f2cf330;r $t0=@$t0+8){
+        dt _WMI_LOGGER_CONTEXT poi(@$t0) LoggerName
+        dt _eprocess poi(poi(poi(@$t0)+0x158)+18) ImageFileName
+    }
+
+
+$   $$><C:\Users\15118\Desktop\windbg.wds      excute script command
+$
+$   dt -a 和dt显示ImageFileName的区别是,dt -a 会把具体的ascall码显示出来
+$
+$   
+$
+$
+
+*
+提取打开会话的进程名字,如果没有消费者的话进程名字为空
+脚本输出结果
+
+1: kd> $$><C:\Users\15118\Desktop\windbg.wds
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "Circular Kernel Context Logger"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15] UChar
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "Eventlog-Security"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15]  "svchost.exe"
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "AppModel"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15] UChar
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "ScreenOnPowerStudyTraceSession"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15] UChar
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "DefenderApiLogger"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15]  "MsMpEng.exe"
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "DefenderAuditLogger"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15]  "MsMpEng.exe"
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "DiagLog"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15]  "svchost.exe"
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "EventLog-Application"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15]  "svchost.exe"
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "EventLog-System"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15]  "svchost.exe"
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "LwtNetLog"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15] UChar
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "NtfsLog"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15] UChar
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "TileStore"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15] UChar
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "UBPM"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15]  "svchost.exe"
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "WdiContextLog"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15] UChar
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "WiFiSession"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15] UChar
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "umstartup"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15] UChar
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "WUDFTrace"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15] UChar
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "UserNotPresentTraceSession"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15] UChar
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "COM"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15] UChar
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "Terminal-Services-LSM"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15] UChar
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "Terminal-Services-RCM"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15] UChar
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "UserMgr"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15] UChar
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "WFP-IPsec Diagnostics"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15]  "svchost.exe"
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "Diagtrack-Listener"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15]  "svchost.exe"
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "MpWppTracing-20220716-144316-00000003-ffffffff"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15] UChar
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "MSDTC_TRACE_SESSION"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15] UChar
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "DCPrinterEventTraceSession"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15]  "MsMpEng.exe"
+nt!_WMI_LOGGER_CONTEXT
+   +0x098 LoggerName : _UNICODE_STRING "WindowsUpdate_trace_log"
+nt!_EPROCESS
+   +0x450 ImageFileName : [15] UChar
+*
