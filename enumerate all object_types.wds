@@ -1,0 +1,191 @@
+.for(r $t0 = fffff802`51834690;@$t0 != fffff802`518348a8;r $t0=@$t0+8){
+        dt _object_type poi(@$t0) Name index
+    }
+
+$$   $$><C:\Users\15118\Desktop\windbg.wds
+$$
+$$   此脚本的目的:
+$$      枚举所有的object_type win10 1809 共66个对象类型
+$$
+$$      
+$$   
+$$   
+$$   
+$$
+
+
+/*
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Type"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Type"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Directory"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "SymbolicLink"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Token"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Job"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Process"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Thread"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Partition"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "UserApcReserve"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "IoCompletionReserve"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "ActivityReference"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "PsSiloContextPaged"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "PsSiloContextNonPaged"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "DebugObject"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Event"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Mutant"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Callback"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Semaphore"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Timer"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "IRTimer"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Profile"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "KeyedEvent"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "WindowStation"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Desktop"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Composition"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "RawInputManager"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "CoreMessaging"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "TpWorkerFactory"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Adapter"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Controller"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Device"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Driver"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "IoCompletion"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "WaitCompletionPacket"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "File"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "TmTm"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "TmTx"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "TmRm"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "TmEn"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Section"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Session"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "Key"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "RegistryTransaction"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "ALPC Port"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "EnergyTracker"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "PowerRequest"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "WmiGuid"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "EtwRegistration"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "EtwSessionDemuxEntry"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "EtwConsumer"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "CoverageSampler"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "DmaAdapter"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "PcwObject"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "FilterConnectionPort"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "FilterCommunicationPort"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "NdisCmState"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "DxgkSharedResource"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "DxgkSharedKeyedMutexObject"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "DxgkSharedSyncObject"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "--- memory read error at address 0xffffb50c`e43ef1a0 ---"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "DxgkDisplayManagerObject"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "DxgkCurrentDxgProcessObject"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "DxgkSharedProtectedSessionObject"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "DxgkSharedBundleObject"
+nt!_OBJECT_TYPE
+   +0x010 Name : _UNICODE_STRING "DxgkCompositionObject"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/

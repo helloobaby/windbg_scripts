@@ -1,0 +1,28 @@
+!list -t nt!_LIST_ENTRY.FLink -x "u poi(@$extret+28)" 0xffffb50c`e4769070
+
+$$   $$><C:\Users\15118\Desktop\windbg.wds
+$$
+$$   此脚本的目的:枚举一个object_type下面的所有callback,并打印出所属模块
+$$   
+$$   首先得获得一个object_type地址,然后加0xc8(+0x0c8 CallbackList),得到其中一个ListEntry地址
+$$
+$$   lm a 的命令需要.reload /n加载pdb
+$$
+
+
+
+/*
+
+//这个结构体要去逆向的
+typedef struct _OB_CALLBACK_CONTEXT
+{
+	LIST_ENTRY listEntry;
+	ULONG64 Operations;//16
+	PVOID regitstContext;//24
+	POBJECT_TYPE ObjectType;//32
+	POB_PRE_OPERATION_CALLBACK PreOperation;//40 = 0x28
+	POB_POST_OPERATION_CALLBACK PostOperation;//48
+}OB_CALLBACK_CONTEXT, POB_CALLBACK_CONTEXT;
+
+
+*/
