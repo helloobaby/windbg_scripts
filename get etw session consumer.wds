@@ -8,7 +8,7 @@ $   $$><C:\Users\15118\Desktop\windbg.wds      excute script command
 $
 $   dt -a 和dt显示ImageFileName的区别是,dt -a 会把具体的ascall码显示出来
 $
-$   
+$   _ESERVERSILO_GLOBALS PspHostSiloGlobals
 $
 $
 
