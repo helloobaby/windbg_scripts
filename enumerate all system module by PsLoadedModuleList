@@ -1,0 +1,1 @@
+!list -t nt!_LIST_ENTRY.FLink -x "dt nt!_LDR_DATA_TABLE_ENTRY BaseDllName DllBase @$extret" PsLoadedModuleList
