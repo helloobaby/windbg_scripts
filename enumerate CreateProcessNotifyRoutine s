@@ -1,0 +1,56 @@
+        
+
+.for(r $t0 = fffff800`12873430;@$t0 != fffff800`12873478;r $t0=@$t0+8){
+        
+        r $t1 = poi(@$t0) & 0xfffffffffffffff0
+        r $t2 = poi(@$t1+8)
+        lm a @$t2
+		
+    }
+    
+
+
+$   $$><C:\Users\15118\Desktop\windbg.wds  
+
+
+/*
+1: kd> dq PspCreateProcessNotifyRoutine
+fffff800`12873430  ffff870e`ef051a5f ffff870e`ef2f690f
+fffff800`12873440  ffff870e`ef8f5e4f ffff870e`ef8f5edf
+fffff800`12873450  ffff870e`ef99b60f ffff870e`efc6a24f
+fffff800`12873460  ffff870e`ef99b69f ffff870e`efc6aaef
+fffff800`12873470  ffff870e`eff1a4bf ffff870e`f3e1e57f
+
+
+start             end                 module name
+fffff800`12417000 fffff800`12e08000   nt         (pdb symbols)          C:\ProgramData\Dbg\sym\ntkrnlmp.pdb\69247313056076BBCB3411FD964287141\ntkrnlmp.pdb
+1: kd> $$><C:\Users\15118\Desktop\windbg.wds 
+Browse full module list
+start             end                 module name
+fffff800`12417000 fffff800`12e08000   nt         (pdb symbols)          C:\ProgramData\Dbg\sym\ntkrnlmp.pdb\69247313056076BBCB3411FD964287141\ntkrnlmp.pdb
+Browse full module list
+start             end                 module name
+fffff800`14e00000 fffff800`14eb7000   cng        (deferred)             
+Browse full module list
+start             end                 module name
+fffff800`edd80000 fffff800`eddab000   ksecdd     (deferred)             
+Browse full module list
+start             end                 module name
+fffff800`16b90000 fffff800`16e6b000   tcpip      (deferred)             
+Browse full module list
+start             end                 module name
+fffff800`15ef0000 fffff800`15f01000   iorate     (deferred)             
+Browse full module list
+start             end                 module name
+fffff800`15310000 fffff800`153e3000   CI         (deferred)             
+Browse full module list
+start             end                 module name
+fffff800`160f0000 fffff800`163c0000   csagent    (deferred)             
+Browse full module list
+start             end                 module name
+fffff800`16420000 fffff800`1675e000   dxgkrnl    (deferred)             
+Browse full module list
+start             end                 module name
+fffff800`13960000 fffff800`139ae000   vm3dmp     (deferred)      
+
+*/
