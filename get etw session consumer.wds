@@ -1,8 +1,16 @@
-.for(r $t0 = ffffc20c`5f2cf250;@$t0 != ffffc20c`5f2cf330;r $t0=@$t0+8){
+r @$t9 = poi(PspHostSiloGlobals+@@c++(#FIELD_OFFSET(nt!_ESERVERSILO_GLOBALS, EtwSiloState))) 
+r @$t8 = poi(@$t9+@@c++(#FIELD_OFFSET(nt!_ETW_SILODRIVERSTATE, EtwpLoggerContext))) 
+
+.for(r $t0 = @$t8+10;@$t0 != @$t8+0n1000;r $t0=@$t0+8){
         dt _WMI_LOGGER_CONTEXT poi(@$t0) LoggerName
         dt _eprocess poi(poi(poi(@$t0)+0x158)+18) ImageFileName
     }
 
+
+/*
+.for(r $t0 = @$t8+10;@$t0 != @$t8+0n1000;r $t0=@$t0+8){    起始地址和结束地址可以稍微调一下   因为windbg读的时候出异常就会停止。
+
+*/
 
 $   $$><C:\Users\15118\Desktop\windbg.wds      excute script command
 $
