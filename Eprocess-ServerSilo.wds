@@ -1,5 +1,12 @@
-$ 0xFFFFAC070507F328 is any _EPROCESS.ActiveProcessLinks content
-$ 2E8 is offset of ActiveProcessLinks field
+!list -t nt!_LIST_ENTRY.FLink -x "dt nt!_EPROCESS ImageFileName ServerSilo @$extret-@@c++(#FIELD_OFFSET(nt!_EPROCESS, ActiveProcessLinks))" 0xffff870e`f50b7368
 
-!list -t nt!_LIST_ENTRY.FLink -x "dt nt!_EPROCESS ImageFileName ServerSilo @$extret-0x2E8" 0xFFFFAC070507F328
 
+/*
+
+    找到任意一个进程的ActiveProcessLinks中的一个ListEntry,如上图的0xffff870e`f50b7368
+
+
+
+    把所有进程下的ServerSilo字段输出出来。
+
+*/
