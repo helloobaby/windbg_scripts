@@ -1,6 +1,8 @@
-        
 
-.for(r $t0 = fffff800`12873430;@$t0 != fffff800`12873478;r $t0=@$t0+8){
+r @$t9 = PspCreateProcessNotifyRoutine
+
+
+.for(r $t0 = @$t9;@$t0 != @$t9+0n64*8;r $t0=@$t0+8){
         
         r $t1 = poi(@$t0) & 0xfffffffffffffff0
         r $t2 = poi(@$t1+8)
@@ -16,7 +18,7 @@ $   $$><C:\Users\15118\Desktop\windbg.wds
 /*
 1: kd> dq PspCreateProcessNotifyRoutine
 fffff800`12873430  ffff870e`ef051a5f ffff870e`ef2f690f
-fffff800`12873440  ffff870e`ef8f5e4f ffff870e`ef8f5edf
+fffff800`12873440  ffff870e`ef8f5e4f ffff870e`ef8f5edf          10个  78h-30h=48h
 fffff800`12873450  ffff870e`ef99b60f ffff870e`efc6a24f
 fffff800`12873460  ffff870e`ef99b69f ffff870e`efc6aaef
 fffff800`12873470  ffff870e`eff1a4bf ffff870e`f3e1e57f
