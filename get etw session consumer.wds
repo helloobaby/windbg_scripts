@@ -2,6 +2,7 @@ r @$t9 = poi(PspHostSiloGlobals+@@c++(#FIELD_OFFSET(nt!_ESERVERSILO_GLOBALS, Etw
 r @$t8 = poi(@$t9+@@c++(#FIELD_OFFSET(nt!_ETW_SILODRIVERSTATE, EtwpLoggerContext))) 
 
 .for(r $t0 = @$t8+10;@$t0 != @$t8+0n1000;r $t0=@$t0+8){
+        .printf "wmi ctx %p\n",poi(@$t0)
         dt _WMI_LOGGER_CONTEXT poi(@$t0) LoggerName
         dt _eprocess poi(poi(poi(@$t0)+0x158)+18) ImageFileName
     }
