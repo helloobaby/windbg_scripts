@@ -1,4 +1,4 @@
-!list -t nt!_LIST_ENTRY.FLink -x "u poi(@$extret+28)" 0xffffde00`297c0270
+!list -t nt!_LIST_ENTRY.FLink -x "r @$t0 = poi(@$extret+28);lm a @$t0;" poi(poi(PsProcessType)+@@c++(#FIELD_OFFSET(nt!_OBJECT_TYPE, CallbackList)))
 
 $$   $$><C:\Users\15118\Desktop\windbg.wds
 $$
