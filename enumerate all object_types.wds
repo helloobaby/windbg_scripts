@@ -1,4 +1,4 @@
-.for(r $t0 = fffff802`51834690;@$t0 != fffff802`518348a8;r $t0=@$t0+8){
+.for(r $t0 = ObpObjectTypes;@$t0 != ObpObjectTypes+0x1000;r $t0=@$t0+8){
         dt _object_type poi(@$t0) Name index
     }
 
