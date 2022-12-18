@@ -1,8 +1,0 @@
-bp nt!EtwpRegTraceCallback "k
-.block{
-    gc
-}"
-
-
-或者
-bp nt!EtwpRegTraceCallback "k;g"
