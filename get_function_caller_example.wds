@@ -1,0 +1,2 @@
+bp nt!NtCreateFile ".printf \"%ma  \\n\",(@$proc+@@c++(#FIELD_OFFSET(nt!_EPROCESS, ImageFileName)));g";
+

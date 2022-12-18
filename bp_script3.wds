@@ -1,4 +1,0 @@
-bp nt!NtCreateFile ".printf \"%ma  \\n\",(@$proc+0x450);g";
-
-
-$.printf内换行要双斜杠
